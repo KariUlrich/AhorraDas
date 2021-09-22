@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+  <!------------------------------barra de navegacion--------------------------------------->
     <header>
     <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -45,12 +46,13 @@
       </nav>
     </header>
     <main>
+  <!--------------------------------Sección Principal--------------------------------------->
         <section class="section has-background-light">
             <div class="container">
             <div class="divPrincipal columns">
                 <div class="column is-3 is-offset-1">
                     <div class="box has-background-white">
-                        <article class="title is-4">Balance</article> 
+                      <h3 class="is-size-4 has-text-weight-bold">Balance</h3>
                           <div class="content is-5">
                             <p>Ganancias</p>
                             <p>Gastos</p>
@@ -58,46 +60,170 @@
                             </div>                      
                       </div>
                       <div class="box has-background-white">
-                        <article class="title is-4">Filtros</article> 
-                          <div class="content is-5">
-                            <p>Tipo</p>
-                            <p>Categoria</p>
-                            <p>Desde</p>
-                            <p>Ordenar por</p>  
-                            </div>                      
+                         <div class="columns">
+                           <div class="column">
+                             <h3 class="is-size-4 has-text-weight-bold">Filtros</h3>
+                           </div>
+                           <div class="column has-text-right">
+                             <a href="#">Ocultar filtros</a>
+                           </div>
+                         </div>
+                         <div class="field">
+                           <label class="label" for="filtro-tipo">Tipo</label>
+                           <div class="control">
+                             <div class="select is-fullwidth">
+                               <select id="filtro-tipo">
+                                 <option value="todos">Todos</option>
+                                 <option value="gasto">Gasto</option>
+                                 <option value="ganancia">Ganancia</option>
+                               </select>
+                             </div>
+                           </div>
+                         </div>
+                         <div class="field">
+                          <label class="label" for="filtro-categoria">Categoría</label>
+                          <div class="control">
+                            <div class="select is-fullwidth">
+                              <select id="filtro-categoria">
+                                <option value="todas">Todas</option>
+                                <option value="comida">Comida</option>
+                                <option value="servicios">Servicios</option>
+                                <option value="salidas">Salidas</option>
+                                <option value="educacion">Educación</option>
+                                <option value="transporte">Transporte</option>
+                                <option value="trabajo">Trabajo</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <label class="label" for="filtro-fecha">Desde</label>
+                          <div class="control">
+                            <div class="is-fullwidth">
+                              <input class="input" type="date" id="filtro-fecha">                                 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <label class="label" for="filtro-ordenar-por">Ordenar por</label>
+                          <div class="control">
+                            <div class="select is-fullwidth is-multiple">
+                              <select  id="filtro-ordenar-por">
+                                <option value="mas-reciente">Mas reciente</option>
+                                <option value="menos-reciente">Menos reciente</option>
+                                <option value="mayor-monto">Mayor Monto</option>
+                                <option value="menor-monto">Menor Monto</option>
+                                <option value="az">A/Z</option>
+                                <option value="za">Z/A</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>                                       
                       </div>
                  </div>
                 <div class="column is-7">
                   <div class="box has-background-white">
-                    <article class="title is-4">Operaciones</article> 
-                    <button>Nueva Operacion</button> 
+                    <div class="columns">
+                      <div class="column">
+                        <h3 class="is-size-4 has-text-weight-bold">Operaciones</h3>
+                      </div>
+                      <div class="column has-text-right">
+                        <button type="button" class="button is-primary botonNuevaOpe">+ Nueva Operación</button>
+                      </div>
+                    </div>
                       <div class="content is-5">                                               
                                 <div class="image">
-                                    <figure class="image is-4by3">
+                                    <figure class="image is-3by2">
                                       <img src="./undraw_Super_thank_you_re_f8bo.svg" alt="Placeholder image">
                                     </figure>
+                                    <h4 class="is-size-4 has-text-centered has-text-weight-semibold">Sin resultados</h4>
+                                    <p class="has-text-centered pb-4">Cambia los filtros o agrega operaciones</p>
                                   </div>
-                        </div>                      
+                        </div> 
                   </div>                    
                 </div>  
             </div>    
           </div>
         </section>
-        <section class="ocultar categorias section has-background-light">
+  <!----------------------------------Categorias(oculta)-------------------------------------------->
+        <section class="categorias section has-background-light pt-0 is-hidden">
           <div class="container">
               <div class="columns">
                   <div class="column is-8 is-offset-2">
                       <div class="box has-background-white">
-                          <article class="title is-2">Categorías</article> 
-                            <div class="content is-5">
-                              <p>Hola</p>                                        
-                            </div>                      
+                        <h2 class="is-size-2 has-text-weight-bold mb-6">Categorías</h2>
+                        <label class="label" for="categoria-nombre">Nombre</label>
+                        <div class="field is-grouped">
+                          <div class="control is-expanded">
+                            <input class="input" type="text" id="categoria-nombre">
+                          </div>
+                          <div class="control">
+                            <button class="button is-success">Agregar</button>
+                          </div>                     
+                        </div>
+                        <div class="mt-6">
+                          <div class="columns">
+                            <div class="column">
+                              <span class="tag is-primary is-light">Comida</span>
+                            </div>
+                            <div class="column is-narrow">
+                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
+                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                            </div>
+                          </div>
+                          <div class="columns">
+                            <div class="column">
+                              <span class="tag is-primary is-light">Servicios</span>
+                            </div>
+                            <div class="column is-narrow">
+                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
+                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                            </div>
+                          </div>
+                          <div class="columns">
+                            <div class="column">
+                              <span class="tag is-primary is-light">Salidas</span>
+                            </div>
+                            <div class="column is-narrow">
+                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
+                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                            </div>
+                          </div>
+                          <div class="columns">
+                            <div class="column">
+                              <span class="tag is-primary is-light">Educación</span>
+                            </div>
+                            <div class="column is-narrow">
+                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
+                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                            </div>
+                          </div>
+                          <div class="columns">
+                            <div class="column">
+                              <span class="tag is-primary is-light">Transporte</span>
+                            </div>
+                            <div class="column is-narrow">
+                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
+                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                            </div>
+                          </div>
+                          <div class="columns">
+                            <div class="column">
+                              <span class="tag is-primary is-light">Trabajo</span>
+                            </div>
+                            <div class="column is-narrow">
+                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
+                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                            </div>
+                          </div>
+                        </div>                                    
                         </div>                        
                    </div>                  
               </div> 
           </div>   
         </section>
-        <section class="ocultar reportes section has-background-light">
+  <!-----------------------------------Reportes(oculta)---------------------------------------------->
+        <section class="reportes section has-background-light is-hidden">
           <div class="container">
                 <div class="columns">
                     <div class="column is-8 is-offset-2">
@@ -110,9 +236,80 @@
                      </div>                  
                 </div>    
           </div>
-        </section>              
-    </main>
+        </section>      
+  <!--------------------------------Nueva Operación(oculta)----------------------------------------->
+        <section class="pt-0 section has-background-light nuevaOperacion is-hidden">
+          <div class="container">
+          <div class="columns">
+              <div class="column is-8 is-offset-2">
+                  <div class="box has-background-white"> 
+                    <h3 class="is-size-2 has-text-weight-bold">Nueva Operación</h3>
+                    <div class="field">
+                      <label class="label" for="input-descripcion">Descripción</label> 
+                      <div class="control">
+                        <div class="is-fullwidth">
+                        <input class="input" type="text" id="input-descripcion">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="input-monto">Monto</label> 
+                      <div class="control">
+                        <div class="is-fullwidth">
+                        <input class="input" type="number" id="input-monto">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="select-tipo">Tipo</label> 
+                      <div class="control">
+                        <div class="select is-fullwidth">
+                            <select id="select-tipo">
+                              <option value="gasto">Gasto</option>
+                              <option value="ganancia">Ganancia</option>
+                            </select>
+                        </div>                   
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="select-categoria">Categoría</label> 
+                      <div class="control">
+                        <div class="select is-fullwidth">
+                            <select id="select-categoria">
+                              <option value="comida">Comida</option>
+                              <option value="servicios">Servicios</option>
+                              <option value="salidas">Salidas</option>
+                              <option value="educacion">Educación</option>
+                              <option value="transporte">Transporte</option>
+                              <option value="trabajo">Trabajo</option>
+                            </select>
+                        </div>                   
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="fecha">Fecha</label>
+                      <div class="control">
+                        <div class="is-fullwidth">
+                          <input class="input" type="date" id="fecha">                                 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field is-grouped mt-6">
+                      <div class="control">
+                        <button class="button is-light" type="button" id="cancelar">Cancelar</button>
+                      </div>
+                      <div class="control">
+                        <button class="button is-success" type="button" id="agregar">Agregar</button>
+                      </div>
+                    </div>
 
+                   </div>
+               </div>
+            </div>
+      </div>
+        </section>
+    </main>
+   
    <script src="index.js"></script>
 </body>
 </html>
