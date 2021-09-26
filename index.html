@@ -47,27 +47,35 @@
     </header>
     <main>
   <!--------------------------------Sección Principal--------------------------------------->
-        <section class="section has-background-light">
+        <section class="secPrincipal section has-background-light">
             <div class="container">
-            <div class="divPrincipal columns">
+            <div class="columns">
                 <div class="column is-3 is-offset-1">
                     <div class="box has-background-white">
-                      <h3 class="is-size-4 has-text-weight-bold">Balance</h3>
-                          <div class="content is-5">
-                            <p>Ganancias</p>
-                            <p>Gastos</p>
-                            <p>Total</p>                     
-                            </div>                      
-                      </div>
-                      <div class="box has-background-white">
-                         <div class="columns">
+                      <h3 class="is-size-3 has-text-weight-bold">Balance</h3>
+                          <div class="columns is-vcentered mt-5">
+                            <div class ="column is-size-5">Ganancia</div>
+                            <div class="column has-text-right has-text-success">+$0</div>
+                          </div>
+                          <div class="columns is-vcentered">
+                            <div class ="column is-size-5">Gastos</div>
+                            <div class="column has-text-right has-text-danger">-$0</div>
+                          </div>
+                          <div class="columns is-vcentered">
+                            <div class ="column is-size-4">Total</div>
+                            <div class="column has-text-right has-text-weight-bold">$0</div>
+                          </div>   
+                          </div>                                     
+                        <div class="box has-background-white">
+                         <div class="columns is-vcentered">
                            <div class="column">
                              <h3 class="is-size-4 has-text-weight-bold">Filtros</h3>
                            </div>
                            <div class="column has-text-right">
-                             <a href="#">Ocultar filtros</a>
+                            <button class="button is-ghost is-size-7 botonOcultarFiltros">Ocultar Filtros</button>
                            </div>
                          </div>
+                         <div class="form divFiltros">
                          <div class="field">
                            <label class="label" for="filtro-tipo">Tipo</label>
                            <div class="control">
@@ -118,12 +126,13 @@
                               </select>
                             </div>
                           </div>
-                        </div>                                       
+                        </div>      
+                      </div>
                       </div>
                  </div>
                 <div class="column is-7">
                   <div class="box has-background-white">
-                    <div class="columns">
+                    <div class="columns is-vcentered">
                       <div class="column">
                         <h3 class="is-size-4 has-text-weight-bold">Operaciones</h3>
                       </div>
@@ -131,22 +140,21 @@
                         <button type="button" class="button is-primary botonNuevaOpe">+ Nueva Operación</button>
                       </div>
                     </div>
-                      <div class="content is-5">                                               
-                                <div class="image">
-                                    <figure class="image is-3by2">
-                                      <img src="./undraw_Super_thank_you_re_f8bo.svg" alt="Placeholder image">
-                                    </figure>
-                                    <h4 class="is-size-4 has-text-centered has-text-weight-semibold">Sin resultados</h4>
-                                    <p class="has-text-centered pb-4">Cambia los filtros o agrega operaciones</p>
-                                  </div>
-                        </div> 
+                    <div class="columns">
+                      <div class="column is-6 is-offset-3">                        
+                          <figure class="image">
+                            <img src="./undraw_Super_thank_you_re_f8bo.svg" alt="Placeholder image">
+                          </figure>
+                          <h4 class="is-size-4 has-text-centered has-text-weight-semibold mt-5">Sin resultados</h4>
+                          <p class="has-text-centered pb-6 pt-2">Cambia los filtros o agrega operaciones</p>                                             
+                      </div>              
                   </div>                    
                 </div>  
             </div>    
           </div>
         </section>
   <!----------------------------------Categorias(oculta)-------------------------------------------->
-        <section class="categorias section has-background-light pt-0 is-hidden">
+        <section class="categorias section has-background-light is-hidden">
           <div class="container">
               <div class="columns">
                   <div class="column is-8 is-offset-2">
@@ -167,8 +175,8 @@
                               <span class="tag is-primary is-light">Comida</span>
                             </div>
                             <div class="column is-narrow">
-                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
-                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                              <button class="button is-ghost is-small">Editar</button>
+                              <button class="button is-ghost is-small">Eliminar</button>                              
                             </div>
                           </div>
                           <div class="columns">
@@ -176,8 +184,9 @@
                               <span class="tag is-primary is-light">Servicios</span>
                             </div>
                             <div class="column is-narrow">
-                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
-                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                              <button class="button is-ghost is-small">Editar</button>
+                              <button class="button is-ghost is-small">Eliminar</button>
+                             
                             </div>
                           </div>
                           <div class="columns">
@@ -185,8 +194,8 @@
                               <span class="tag is-primary is-light">Salidas</span>
                             </div>
                             <div class="column is-narrow">
-                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
-                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                              <button class="button is-ghost is-small">Editar</button>
+                              <button class="button is-ghost is-small">Eliminar</button>
                             </div>
                           </div>
                           <div class="columns">
@@ -194,8 +203,8 @@
                               <span class="tag is-primary is-light">Educación</span>
                             </div>
                             <div class="column is-narrow">
-                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
-                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                              <button class="button is-ghost is-small">Editar</button>
+                              <button class="button is-ghost is-small">Eliminar</button>
                             </div>
                           </div>
                           <div class="columns">
@@ -203,8 +212,8 @@
                               <span class="tag is-primary is-light">Transporte</span>
                             </div>
                             <div class="column is-narrow">
-                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
-                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                              <button class="button is-ghost is-small">Editar</button>
+                              <button class="button is-ghost is-small">Eliminar</button>
                             </div>
                           </div>
                           <div class="columns">
@@ -212,8 +221,8 @@
                               <span class="tag is-primary is-light">Trabajo</span>
                             </div>
                             <div class="column is-narrow">
-                              <a href="#" class="is-size-7 mr-4 edit-link">Editar</a>
-                              <a href="#" class="is-size-7 delete-link">Eliminar</a>
+                              <button class="button is-ghost is-small">Editar</button>
+                              <button class="button is-ghost is-small">Eliminar</button>
                             </div>
                           </div>
                         </div>                                    
@@ -229,21 +238,27 @@
                     <div class="column is-8 is-offset-2">
                         <div class="box has-background-white">
                             <article class="title is-2">Reportes</article> 
-                              <div class="content is-5">
-                                <p>Hola</p>                                        
-                                </div>                      
+                            <div class="columns">
+                              <div class="column is-6 is-offset-3">                        
+                                  <figure class="image">
+                                    <img src="undraw_add_document_re_mbjx.svg" alt="Placeholder image">
+                                  </figure>
+                                  <h4 class="is-size-4 has-text-centered has-text-weight-semibold mt-5">Operaciones insuficientes</h4>
+                                  <p class="has-text-centered pb-6 pt-2">Prueba agregando más operaciones</p>                                             
+                              </div>              
+                          </div>                            
                           </div>                        
                      </div>                  
                 </div>    
           </div>
         </section>      
   <!--------------------------------Nueva Operación(oculta)----------------------------------------->
-        <section class="pt-0 section has-background-light nuevaOperacion is-hidden">
+        <section class="section has-background-light nuevaOperacion is-hidden">
           <div class="container">
           <div class="columns">
               <div class="column is-8 is-offset-2">
                   <div class="box has-background-white"> 
-                    <h3 class="is-size-2 has-text-weight-bold">Nueva Operación</h3>
+                    <h3 class="is-size-2 has-text-weight-bold mb-6">Nueva Operación</h3>
                     <div class="field">
                       <label class="label" for="input-descripcion">Descripción</label> 
                       <div class="control">
@@ -293,21 +308,24 @@
                           <input class="input" type="date" id="fecha">                                 
                         </div>
                       </div>
-                    </div>
-                    <div class="field is-grouped mt-6">
-                      <div class="control">
-                        <button class="button is-light" type="button" id="cancelar">Cancelar</button>
+                    </div>   
+                    <div class="columns">
+                      <div class="column is-4 is-offset-8">
+                       <div class="field is-grouped mt-6 ml-5">
+                          <div class="control">
+                            <button class="button is-light" type="button" id="cancelar">Cancelar</button>
+                          </div>
+                          <div class="control">
+                            <button class="button is-success" type="button" id="agregar">Agregar</button>
+                          </div>
                       </div>
-                      <div class="control">
-                        <button class="button is-success" type="button" id="agregar">Agregar</button>
-                      </div>
-                    </div>
-
-                   </div>
-               </div>
-            </div>
+                     </div> 
+                  </div>                                
+                </div>
+              </div>
+          </div>   
       </div>
-        </section>
+  </section>
     </main>
    
    <script src="index.js"></script>
