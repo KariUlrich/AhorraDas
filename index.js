@@ -1,4 +1,4 @@
-
+// -------------------------Ocultar y mostrar modales ------------------------------
 const botonBalance = document.querySelector(".botonBalance")
 const botonCategorias = document.querySelector(".botonCategorias")
 const botonReportes = document.querySelector(".botonReportes")
@@ -28,12 +28,13 @@ botonReportes.onclick = () => {
     reportes.classList.remove("is-hidden")
     nuevaOperacion.classList.add("is-hidden")
 }
+// ---------------------------Nueva Operacion ----------------------------------------
 
 botonNuevaOpe.onclick = () => {
     nuevaOperacion.classList.remove("is-hidden")
     secPrincipal.classList.add("is-hidden")
 }
-
+// -----------------------------Mostrar y ocultar filtros-------------------------------
 const divFiltros = document.querySelector(".divFiltros")
 const botonOcultarFiltros = document.querySelector(".botonOcultarFiltros")
 
@@ -47,7 +48,37 @@ const ocultarFiltros = () => {
         botonOcultarFiltros.textContent = "Ocultar Filtros"
     }
 }
-
+// ---------------------------------Boton Hamburguesa----------------------------------
 botonOcultarFiltros.onclick = ocultarFiltros
 
+const botonHamburguesa = document.querySelector(".botonHamburguesa")
+const hamburguesa = document.querySelector(".hamburguesa")
 
+botonHamburguesa.onclick = () => {
+    hamburguesa.classList.toggle("is-hidden")
+}
+
+const bBalance = document.querySelector(".bBalance")
+const bCategorias = document.querySelector(".bCategorias")
+const bReportes = document.querySelector(".bReportes")
+
+bBalance.onclick = () => {
+    secPrincipal.classList.remove("is-hidden")
+    categorias.classList.add("is-hidden")
+    reportes.classList.add("is-hidden")
+    nuevaOperacion.classList.add("is-hidden")
+}
+
+bCategorias.onclick = () => {
+    secPrincipal.classList.add("is-hidden")
+    categorias.classList.remove("is-hidden")
+    reportes.classList.add("is-hidden")
+    nuevaOperacion.classList.add("is-hidden")
+}
+
+bReportes.onclick = () => {
+    secPrincipal.classList.add("is-hidden")
+    categorias.classList.add("is-hidden")
+    reportes.classList.remove("is-hidden")
+    nuevaOperacion.classList.add("is-hidden")
+}
