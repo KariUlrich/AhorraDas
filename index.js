@@ -48,9 +48,9 @@ const ocultarFiltros = () => {
         botonOcultarFiltros.textContent = "Ocultar Filtros"
     }
 }
-// ---------------------------------Boton Hamburguesa----------------------------------
 botonOcultarFiltros.onclick = ocultarFiltros
 
+// ---------------------------------Boton Hamburguesa----------------------------------
 const botonHamburguesa = document.querySelector(".botonHamburguesa")
 const hamburguesa = document.querySelector(".hamburguesa")
 
